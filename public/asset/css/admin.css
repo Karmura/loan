@@ -23,7 +23,7 @@
 }
 
 #article{
-    padding: 0 10px;
+    /* padding: 0 10px; */
     /* box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.3); */
 }
 .activearticle{
@@ -40,8 +40,15 @@
     width: 20%;
     display: flex;
     align-items: center;
-    padding-right: 15px;
+    padding:0 15px;
 }
 .article-body-input .article-input{
     width: 80%;
+}
+
+.hide_blade{
+    display: none;
+}
+.show_blade{
+    display: block;
 }

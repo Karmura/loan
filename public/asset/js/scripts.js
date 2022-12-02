@@ -1,26 +1,55 @@
-/*!
-    * Start Bootstrap - SB Admin v7.0.5 (https://startbootstrap.com/template/sb-admin)
-    * Copyright 2013-2022 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-    */
-    // 
-// Scripts
-// 
+var getarticle = document.getElementById('articlelink');
+var getloan = document.getElementById('loan');
+var getdownload = document.getElementById('download');
+var getcarousel = document.getElementById('carousel');
 
-window.addEventListener('DOMContentLoaded', event => {
+let getarticlepage = document.getElementById('article_page');
+let getloanpage = document.getElementById('loan_page');
+let getdownloadpage = document.getElementById('download_page');
+let getcarouselpage = document.getElementById('carousel_page');
 
-    // Toggle the side navigation
-    const sidebarToggle = document.body.querySelector('#sidebarToggle');
-    if (sidebarToggle) {
-        // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
-        // }
-        sidebarToggle.addEventListener('click', event => {
-            event.preventDefault();
-            document.body.classList.toggle('sb-sidenav-toggled');
-            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
-        });
-    }
+getarticle.addEventListener('click', function(){
+    getarticlepage.classList.remove('hide_blade');
+    getloanpage.classList.add('hide_blade');
+    getdownloadpage.classList.add('hide_blade');
+    getcarouselpage.classList.add('hide_blade');
 
+    getarticle.classList.add('activearticle');
+    getloan.classList.remove('activearticle');
+    getdownload.classList.remove('activearticle');
+    getcarousel.classList.remove('activearticle');
+});
+
+getloan.addEventListener('click', function(){
+    getarticlepage.classList.add('hide_blade');
+    getloanpage.classList.remove('hide_blade');
+    getdownloadpage.classList.add('hide_blade');
+    getcarouselpage.classList.add('hide_blade');
+
+    getarticle.classList.remove('activearticle');
+    getloan.classList.add('activearticle');
+    getdownload.classList.remove('activearticle');
+    getcarousel.classList.remove('activearticle');
+});
+getdownload.addEventListener('click', function(){
+    getarticlepage.classList.add('hide_blade');
+    getloanpage.classList.add('hide_blade');
+    getdownloadpage.classList.remove('hide_blade');
+    getcarouselpage.classList.add('hide_blade');
+
+    getarticle.classList.remove('activearticle');
+    getloan.classList.remove('activearticle');
+    getdownload.classList.add('activearticle');
+    getcarousel.classList.remove('activearticle');
+});
+getcarousel.addEventListener('click', function(){
+    getarticlepage.classList.add('hide_blade');
+    getloanpage.classList.add('hide_blade');
+    getdownloadpage.classList.add('hide_blade');
+    getcarouselpage.classList.remove('hide_blade');
+
+    getarticle.classList.remove('activearticle');
+    getloan.classList.remove('activearticle');
+    getdownload.classList.remove('activearticle');
+    getcarousel.classList.add('activearticle');
 });
